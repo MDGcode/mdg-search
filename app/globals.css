@@ -2,26 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+    color:white;
+    --tw-bg-opacity: 0.95;
+    background-color: rgb(27 40 56 / var(--tw-bg-opacity));
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.rounded-div{
+    @apply rounded-2xl shadow-2xl px-2  w-full mx-auto max-w-[1130px]
 }
+a{
+    text-decoration: underline;
+}
+/**
+.dark {
+    --color-bg-primary: #2d3748;
+    --color-bg-secondary: #283141;
+    --color-text-primary:#dbdbdb;
+    --color-text-secondary:#e2e8f0;
+    --color-text-accent:#81e6d9;
+    --color-bg-input:#4a5361;
+    --color-bg-output:#81e6d9;
+}
+.light{
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #edf2f7;
+    --color-text-primary:#2d3748;
+    --color-text-secondary:#4a5568;
+    --color-text-accent:#2b6cb0;
+    --color-bg-input:#edf2f7;
+    --color-bg-output:#2b6cb0;
+}
+*/
