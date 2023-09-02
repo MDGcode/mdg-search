@@ -5,6 +5,7 @@ import { Sparklines, SparklinesLine } from "react-sparklines";
 import DOMPurify from "dompurify";
 import Footer from "../components/Footer";
 import CoinChart from "../components/CoinChart";
+import Loading from "../components/Loading";
 
 interface CoinData {
   liquidity_score: number;
@@ -93,11 +94,10 @@ export default function Coin(props: CoinProps) {
   }, [url]);
   if (!coin) {
     return (
-      <div className="bg-inherit">
-        <div>Loading...</div>
-      </div>
+      <>
+        <Loading />
+      </>
     );
-    // Add a loading state or message
   }
   return (
     <>
