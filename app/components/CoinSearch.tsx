@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import CoinItem from "./CoinItem";
 export default function CoinSearch(props: any) {
