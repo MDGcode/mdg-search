@@ -121,9 +121,9 @@ export default function Coin(props: CoinProps) {
   }
   const newsUrl = `https://newsapi.org/v2/everything?q=+${
     coin?.name
-  }+crypto&from=${getDateDaysAgo(
-    days
-  )}&sortBy=${criteria}&apiKey=4dcf94418f6a472d819c8371e370e175`;
+  }+crypto&from=${getDateDaysAgo(days)}&sortBy=${criteria}&apiKey=${
+    process.env.NEXT_PUBLIC_NEWS_API_KEY
+  }`;
   console.log(getDateDaysAgo(7));
   useEffect(() => {
     axios
